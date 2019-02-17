@@ -47,19 +47,34 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
+        $name=$_POST['name'];
+        $first_name=$_POST['first_name'];
+
         $request->validate([
-            'name' => 'required',
-            'detail' => 'required',
-            'first_name'    =>  'required',
-            'last_name'     =>  'required'
+            'name'      => '',
+            'detail'    => '',
+            'first_name'=> '',
+            'last_name' => ''
         ]);
-  
-        Product::create($request->all());
-        Student::create($request->all());
-        return redirect()->route('table')
-                        ->with('success','Product created successfully.');
+
+        if(!empty($name) && !empty($first_name)){
+            Product::create($request->all());
+            Student::create($request->all());    
+            return redirect()->route('table')
+            ->with('success','*All* created successfully.');
+        }
+        if(!empty($name)){
+            Product::create($request->all());
+            return redirect()->route('table')
+            ->with('success','Product created successfully.');
+        }
+        if(!empty($first_name)){
+            Student::create($request->all());    
+            return redirect()->route('table')
+            ->with('success','*Student* created successfully.');
+        }
+
     }
    
     /**
@@ -81,7 +96,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('table',compact('product'));
+        return view('products.view',compact('product'));
     }
   
     /**

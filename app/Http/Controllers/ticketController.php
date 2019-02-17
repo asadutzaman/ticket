@@ -95,7 +95,7 @@ class ticketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $tickets)
+    public function show(ticket $ticket)
     {
         return view('tickets.show',compact('ticket'));
     }

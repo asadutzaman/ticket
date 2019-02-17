@@ -53,11 +53,7 @@
                             <label for="exampleInputEmail1">Phone No.</label>
                             <input type="text" class="form-control"  name="phone" placeholder="name">
                         </div>
-                    </div>
-                    <!--Compalin part-->
-                    <div id="complain_div" >
-                        <div class="col-md-3">
-                            <div class="form-group">
+                        <div class="form-group">
                                 <label for="exampleInputEmail1">Customer Name</label>
                                 <input type="text" class="form-control"  name="c_name" placeholder="name">
                             </div>
@@ -65,6 +61,10 @@
                                 <label for="exampleInputEmail1">Customer Email</label>
                                 <input type="text" class="form-control"  name="c_email" placeholder="name">
                             </div>
+                    </div>
+                    <!--Compalin part-->
+                    <div id="complain_div" >
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Customer Address</label>
                                 <input type="text" class="form-control"  name="c_address" placeholder="name">
@@ -83,17 +83,7 @@
                         </div>
                     </div>
                     <!--Query part-->
-                    <div id="query_div" >
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Customer Name</label>
-                                <input type="text" class="form-control"  name="c_name" placeholder="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Customer Email</label>
-                                <input type="text" class="form-control"  name="c_email" placeholder="name">
-                            </div>
-                        </div>
+                    <div id="query_div">
                         <!--conplain/query-->
                         <div class="col-md-6">
                             <div class="form-group">
@@ -109,10 +99,6 @@
                     <!--Product part-->
                     <div id="product_div">
                         <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Customer Name</label>
-                                <input type="text" class="form-control"  name="c_name" placeholder="">
-                            </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Product  Name</label>
                                 <input type="text" class="form-control"  name="product_name" placeholder="">
