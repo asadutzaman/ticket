@@ -28,6 +28,7 @@
       <li><a href="{{ route('form') }}" ><i class="fa fa-edit"></i><span> Forms</a></span></li>
       <!--<li><a href=""><i class="fa fa-table"></i> <span>Catagory</span></a></li>-->
       <li><a href="{{ route('table') }}"><i class="fa fa-table"></i> <span>Table</span></a></li>
+      <li><a href="{{ route('ticket') }}"><i class="fa fa-table"></i> <span>ticket</span></a></li>
     </ul>
   </section>
   <!-- /.sidebar -->

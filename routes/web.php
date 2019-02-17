@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('products','ProductController');
 Route::get('/table', 'ProductController@table')->name('table');
 Route::get('/form', 'ProductController@form')->name('form');
+
+Route::resource('tickets','ticketController');
+Route::get('/ticket', 'ticketController@ticket')->name('ticket');
