@@ -36,10 +36,10 @@ class ticketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -118,19 +118,33 @@ class ticketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // public function update(Request $request, $id)
+    // {
+    //     $assign   =   $_POST['assign'];
+    //     $status      =   $_POST['status'];
+    //     $request->validate([
+    //         'assign'        =>'',
+    //         'status'        =>''
+    //     ]);
+    //     $ticket = ticket::find($id);
+    //     if(!empty($status)){
+    //         $ticket->update($request->all());   
+    //         return redirect()->route('ticket')
+    //         ->with('success','Ticket Updated successfully.');
+    //     }
+        
+    // }
     public function update(Request $request, $id)
     {
-        $assign   =   $_POST['assign'];
-        $status      =   $_POST['status'];
+        $comment   =   $_POST['comment'];
         $request->validate([
-            'assign'        =>'',
-            'status'        =>''
+            'comment'        =>''
         ]);
         $ticket = ticket::find($id);
-        if(!empty($status)){
+        if(!empty($comment)){
             $ticket->update($request->all());   
             return redirect()->route('ticket')
-            ->with('success','Ticket Updated successfully.');
+            ->with('success','Ticket Comment successfully.');
         }
         
     }

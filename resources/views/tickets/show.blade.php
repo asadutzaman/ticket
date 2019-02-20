@@ -41,7 +41,26 @@
                                 {{ $ticket->complain_details }}
                             </div>
                         </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Ticket Comment:</strong>
+                                {{ $ticket->comment }}
+                            </div>
+                        </div>
                         <hr>
+                        <div class="row">
+                            <form role="form" action="{{ action('ticketController@update', $ticket->id) }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="_method" value="PATCH" />
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Comment</label>
+                                        <textarea type="text" class="form-control"  name="comment" placeholder="comment"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Comment</button>
+                                </div>
+                            </form>    
+                        </div>
                         <div class="row">
                             <form role="form" action="{{ action('ticketController@update', $ticket->id) }}" method="POST">
                                 @csrf

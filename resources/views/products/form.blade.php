@@ -54,13 +54,13 @@
                             <input type="text" class="form-control"  name="phone" placeholder="name">
                         </div>
                         <div class="form-group">
-                                <label for="exampleInputEmail1">Customer Name</label>
-                                <input type="text" class="form-control"  name="c_name" placeholder="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Customer Email</label>
-                                <input type="text" class="form-control"  name="c_email" placeholder="name">
-                            </div>
+                            <label for="exampleInputEmail1">Customer Name</label>
+                            <input type="text" class="form-control"  name="c_name" placeholder="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Customer Email</label>
+                            <input type="text" class="form-control"  name="c_email" placeholder="name">
+                        </div>
                     </div>
                     <!--Compalin part-->
                     <div id="complain_div" >
