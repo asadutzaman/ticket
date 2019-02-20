@@ -36,6 +36,8 @@
                                 <th class="col-md-2">Name</th>
                                 <th class="col-md-5">Subject</th>
                                 <th class="col-md-2">Phone</th>
+                                <th class="col-md-2">Assignd</th>
+                                <th class="col-md-5">Status</th>
                                 <th class="col-md-5">Created</th>
                                 <th class="col-md-4">Action</th>
                             </tr>
@@ -45,6 +47,8 @@
                                 <td>{{ $ticket->c_name }}</td>
                                 <td>{{ $ticket->complain_sub }}</td>
                                 <td>{{ $ticket->phone }}</td>
+                                <td>{{ $ticket->assign }}</td>
+                                <td>{{ $ticket->status }}</td>
                                 <td>{{ $ticket->created_at }}</td>
                                 <td><a class="btn btn-info" href="{{ route('tickets.show',$ticket->id) }}"><i class="fa fa-eye"></i></a></td>
                             </tr>

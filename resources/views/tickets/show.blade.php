@@ -41,10 +41,37 @@
                                 {{ $ticket->complain_details }}
                             </div>
                         </div>
+                        <hr>
+                        <div class="row">
+                            <form role="form" action="{{ action('ticketController@update', $ticket->id) }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="_method" value="PATCH" />
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel1">Ticket Assign</label>
+                                        <select class="form-control" name="assign" id="sel1">
+                                            <option value="1">...</option>
+                                            <option value="Asad">Asad</option>
+                                            <option value="Zaman">Zaman</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel1">Ticket Status</label>
+                                        <select class="form-control" name="status" id="sel1">
+                                            <option>Open</option>
+                                            <option>Close</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>    
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-  </div>
+    </div>
 @endsection

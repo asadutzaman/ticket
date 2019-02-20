@@ -120,7 +120,19 @@ class ticketController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $assign   =   $_POST['assign'];
+        $status      =   $_POST['status'];
+        $request->validate([
+            'assign'        =>'',
+            'status'        =>''
+        ]);
+        $ticket = ticket::find($id);
+        if(!empty($status)){
+            $ticket->update($request->all());   
+            return redirect()->route('ticket')
+            ->with('success','Ticket Updated successfully.');
+        }
+        
     }
 
     /**
