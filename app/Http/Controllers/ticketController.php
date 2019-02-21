@@ -31,6 +31,20 @@ class ticketController extends Controller
         return view('tickets.ticket',compact('tickets'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+    public function query(){
+        //return view('table');
+        $querys = query::latest()->paginate(5);
+  
+        return view('query.query',compact('querys'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+    public function uproduct(){
+        //return view('table');
+        $uproducts = uproduct::latest()->paginate(5);
+  
+        return view('uproduct.product',compact('uproducts'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -99,6 +113,10 @@ class ticketController extends Controller
     {
         return view('tickets.show',compact('ticket'));
     }
+    public function qshow(query $query)
+    {
+        return view('query.show',compact('query'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -118,33 +136,19 @@ class ticketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function update(Request $request, $id)
-    // {
-    //     $assign   =   $_POST['assign'];
-    //     $status      =   $_POST['status'];
-    //     $request->validate([
-    //         'assign'        =>'',
-    //         'status'        =>''
-    //     ]);
-    //     $ticket = ticket::find($id);
-    //     if(!empty($status)){
-    //         $ticket->update($request->all());   
-    //         return redirect()->route('ticket')
-    //         ->with('success','Ticket Updated successfully.');
-    //     }
-        
-    // }
     public function update(Request $request, $id)
     {
-        $comment   =   $_POST['comment'];
+        $assign =   $_POST['assign'];
+        $status =   $_POST['status'];
         $request->validate([
-            'comment'        =>''
+            'assign'    =>'',
+            'status'    =>''
         ]);
         $ticket = ticket::find($id);
-        if(!empty($comment)){
+        if(!empty($status)){
             $ticket->update($request->all());   
             return redirect()->route('ticket')
-            ->with('success','Ticket Comment successfully.');
+            ->with('success','Ticket Updated successfully.');
         }
         
     }

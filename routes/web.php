@@ -24,3 +24,7 @@ Route::get('/form', 'ProductController@form')->name('form');
 
 Route::resource('tickets','ticketController');
 Route::get('/ticket', 'ticketController@ticket')->name('ticket');
+Route::get('/query', 'ticketController@query')->name('query');
+Route::get('/uproduct', 'ticketController@uproduct')->name('uproduct');
+
+Route::resource('comments','commentController');
