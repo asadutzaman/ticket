@@ -42,11 +42,20 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="inputState">Call Type</label>
-                            <select id="department" name="department" class="form-control" >
+                            <select id="" name="calltype" class="form-control" >
                                 <option selected value="0">Select ...</option>
                                 <option value="complain">Complain</option>
                                 <option value="query">Query</option>
                                 <option value="product">Product issue</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputState">Problem Type</label>
+                            <select id="department" name="department" class="form-control" >
+                                <option selected value="0">Select ...</option>
+                                <option value="complain">Pc issue</option>
+                                <option value="query">Asset issue</option>
+                                <option value="product">Paper issue</option>
                             </select>
                         </div>
                         <div class="form-group">

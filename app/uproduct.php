@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class uproduct extends Model
 {
     protected $fillable = [
+        'calltype',
         'department',
         'phone',
         'c_name',

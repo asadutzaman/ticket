@@ -27,9 +27,9 @@
       <li class="header">MAIN NAVIGATION</li>
       <li><a href="{{ route('form') }}" ><i class="fa fa-edit"></i><span> Forms</a></span></li>
       <!--<li><a href=""><i class="fa fa-table"></i> <span>Catagory</span></a></li>-->
-      <li><a href="{{ route('query') }}"><i class="fa fa-table"></i> <span>Query</span></a></li>
-      <li><a href="{{ route('ticket') }}"><i class="fa fa-table"></i> <span>ticket</span></a></li>
-      <li><a href="{{ route('uproduct') }}"><i class="fa fa-table"></i> <span>Products</span></a></li>
+      <li><a href="{{ route('query') }}"><i class="fa fa-table"></i> <span>Admin</span></a></li>
+      <li><a href="{{ route('ticket') }}"><i class="fa fa-table"></i> <span>IT</span></a></li>
+      <li><a href="{{ route('uproduct') }}"><i class="fa fa-table"></i> <span>HR</span></a></li>
     </ul>
   </section>
   <!-- /.sidebar -->

@@ -69,6 +69,7 @@ class ticketController extends Controller
         //$status         =   1;
 
         $request->validate([
+            'calltype'      =>'',
             'department'    =>'',
             'phone'         =>'',
             'c_name'        =>'',
