@@ -20,9 +20,8 @@ class ticketController extends Controller
     {
         return view('products.form');
     }
-    public function index()
+    function index()
     {
-        //
     }
     public function ticket(){
         //return view('table');
@@ -142,16 +141,26 @@ class ticketController extends Controller
         $assign =   $_POST['assign'];
         $status =   $_POST['status'];
         $request->validate([
-            'assign'    =>'',
+            'assign'    => '',
             'status'    =>''
         ]);
         $ticket = ticket::find($id);
-        if(!empty($status)){
+        
+        if(!empty($assign) && empty($status)){
+            $ticket->update(['assign' =>request('assign')]);   
+            return redirect()->route('ticket')
+            ->with('success','Ticket assign Updated successfully.');
+        }
+        if(!empty($status) && empty($assign)){
+            $ticket->update(['status' =>request('status')]);   
+            return redirect()->route('ticket')
+            ->with('success','Ticket status Updated successfully.');
+        }
+        if(!empty($status) && !empty($assign)){
             $ticket->update($request->all());   
             return redirect()->route('ticket')
-            ->with('success','Ticket Updated successfully.');
+            ->with('success','Ticket all Updated successfully.');
         }
-        
     }
 
     /**

@@ -69,7 +69,7 @@
                                     <div class="form-group">
                                         <label for="sel1">Ticket Assign</label>
                                         <select class="form-control" name="assign" id="sel1">
-                                            <option value="1">...</option>
+                                            <option value="">...</option>
                                             <option value="Asad">Asad</option>
                                             <option value="Zaman">Zaman</option>
                                         </select>
@@ -79,8 +79,9 @@
                                     <div class="form-group">
                                         <label for="sel1">Ticket Status</label>
                                         <select class="form-control" name="status" id="sel1">
-                                            <option>Open</option>
-                                            <option>Close</option>
+                                            <option value="">...</option>
+                                            <option value="Open">Open</option>
+                                            <option value="Close">Close</option>
                                         </select>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>

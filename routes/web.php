@@ -26,5 +26,7 @@ Route::resource('tickets','ticketController');
 Route::get('/ticket', 'ticketController@ticket')->name('ticket');
 Route::get('/query', 'ticketController@query')->name('query');
 Route::get('/uproduct', 'ticketController@uproduct')->name('uproduct');
+Route::get('/tickets.show', 'ticketController@index');
+
 
 Route::resource('comments','commentController');
