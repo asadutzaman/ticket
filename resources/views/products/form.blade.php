@@ -42,35 +42,59 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="inputState">Call Type</label>
-                            <select id="" name="calltype" class="form-control" >
+                            <select id="calltype" name="calltype" class="form-control" >
                                 <option selected value="0">Select ...</option>
-                                <option value="complain">Complain</option>
-                                <option value="query">Query</option>
-                                <option value="product">Product issue</option>
+                                <option value="select_1">select_1</option>
+                                <option value="select_1">select_1</option>
+                                <option value="select_div">select_div</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="inputState">Problem Type</label>
-                            <select id="department" name="department" class="form-control" >
-                                <option selected value="0">Select ...</option>
-                                <option value="complain">Pc issue</option>
-                                <option value="query">Asset issue</option>
-                                <option value="product">Paper issue</option>
-                            </select>
+                        <div id="select_1" >
+                            <div class="form-group">
+                                <label for="inputState">select 001</label>
+                                <select id="" name="" class="form-control" >
+                                    <option selected value="0">Select ...</option>
+                                    <option value="">select 001</option>
+                                    <option value="">select 001</option>
+                                    <option value="">select 001</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Phone No.</label>
-                            <input type="text" class="form-control"  name="phone" placeholder="name">
+                        <div id="select_2" >
+                            <div class="form-group">
+                                <label for="inputState">select 002</label>
+                                <select id="" name="" class="form-control" >
+                                    <option selected value="0">Select ...</option>
+                                    <option value="">select 002</option>
+                                    <option value="">select 002</option>
+                                    <option value="">select 002</option>
+                                </select>
+                            </div>
+                        </div> 
+                        <div id="select_div" >
+                            <div class="form-group">
+                                <label for="inputState">Problem Type</label>
+                                <select id="department" name="department" class="form-control" >
+                                    <option selected value="0">Select ...</option>
+                                    <option value="complain">Pc issue</option>
+                                    <option value="query">Asset issue</option>
+                                    <option value="product">Paper issue</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Phone No.</label>
+                                <input type="text" class="form-control"  name="phone" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Customer Name</label>
+                                <input type="text" class="form-control"  name="c_name" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Customer Email</label>
+                                <input type="text" class="form-control"  name="c_email" placeholder="name">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Customer Name</label>
-                            <input type="text" class="form-control"  name="c_name" placeholder="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Customer Email</label>
-                            <input type="text" class="form-control"  name="c_email" placeholder="name">
-                        </div>
-                    </div>
+                    </div>    
                     <!--Compalin part-->
                     <div id="complain_div" >
                         <div class="col-md-3">
@@ -145,6 +169,38 @@
 
     <!-- /.content -->
   </div>
+  <script>
+        $(document).ready(function(){
+            $("#select_1").hide();
+            $("#select_2").hide();
+            $("#select_div").hide();
+       
+            $("#calltype").change(function(){
+                var calltype = $("#calltype").val();
+                //alert(calltype);
+                if (calltype=='select_1'){
+                    $("#select_1").show();
+                    $("#select_2").hide();
+                    $("#select_div").hide();
+                }
+                if (calltype=='select_2'){
+                    $("#select_1").hide();
+                    $("#select_2").show();
+                    $("#select_div").hide();
+                }
+                if (calltype=='select_div'){
+                    $("#select_1").hide();
+                    $("#select_2").hide();
+                    $("#select_div").show();
+                }
+                if (calltype=='0'){
+                    $("#select_1").hide();
+                    $("#select_2").hide();
+                    $("#select_div").hide();
+                }
+            });
+        });
+    </script>
     <script>
         $(document).ready(function(){
             $("#complain_div").hide();
