@@ -39,7 +39,7 @@
                 @csrf
                 <div class="box-body">
                     <!--form first part-->
-                    <div class="col-md-3">
+                    <div class="col-md-9">
                         <div class="form-group">
                             <label for="inputState">Call Type</label>
                             <select id="calltype" name="calltype" class="form-control" >
@@ -92,9 +92,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Customer Email</label>
                                 <input type="text" class="form-control"  name="c_email" placeholder="name">
-                            </div>
-                        </div>
-                    </div>    
+                            </div>   
                     <!--Compalin part-->
                     <div id="complain_div" >
                         <div class="col-md-3">
@@ -150,6 +148,8 @@
                         </div>
                     </div>
                 </div>
+                        </div>
+                    </div> 
               <!-- /.box-body -->
 
               <div class="box-footer">
